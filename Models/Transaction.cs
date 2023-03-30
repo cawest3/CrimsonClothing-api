@@ -4,8 +4,8 @@ namespace CrimsonClothing_api.Models
     {
         int consignmentId {get; set;}
 
-        string username {get; set;}
-
-        string password {get; set;}
+        int customerId {get;set;}
+        
+        decimal profit {get;set;}
     }
 }
