@@ -4,11 +4,9 @@ namespace CrimsonClothing_api.Models
     {
         int itemId {get; set;}
         int price {get; set;}
-
+        string size {get; set;}
         bool stock {get; set;}
-
         decimal value {get; set;}
-
-        decimal price {get; set;}
+        decimal profit {get; set;}
     }
 }
