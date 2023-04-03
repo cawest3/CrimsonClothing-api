@@ -2,10 +2,12 @@ namespace CrimsonClothing_api.Models
 {
     public class Transaction
     {
-        int consignmentId {get; set;}
+        int profit {get; set;}
+        int customerId {get; set;}
 
-        string username {get; set;}
+        decimal price {get; set;}
 
-        string password {get; set;}
+        decimal cost {get; set;}
+
     }
 }
