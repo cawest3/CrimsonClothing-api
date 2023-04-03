@@ -9,5 +9,7 @@ namespace CrimsonClothing_api.Models
         decimal price {get; set;}
 
         decimal cost {get; set;}
+        
+        decimal profit {get;set;}
     }
 }
