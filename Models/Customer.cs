@@ -1,3 +1,5 @@
+using CrimsonClothing_api;
+
 namespace CrimsonClothing_api.Models
 {
     public class Customer
@@ -6,6 +8,7 @@ namespace CrimsonClothing_api.Models
         string username {get; set;}
         string password {get; set;}
         decimal storeCredit {get; set;}
+        public Item[] cart{get; set;} 
 
     }
 }

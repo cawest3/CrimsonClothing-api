@@ -1,3 +1,5 @@
+using CrimsonClothing_api;
+
 namespace CrimsonClothing_api.Models
 {
     public class Item
