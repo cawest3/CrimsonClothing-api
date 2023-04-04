@@ -11,5 +11,6 @@ namespace CrimsonClothing_api.Models
         bool stock {get; set;}
         decimal value {get; set;}
         decimal profit {get; set;}
+        bool inCart {get; set;}
     }
 }
