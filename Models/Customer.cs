@@ -8,6 +8,6 @@ namespace CrimsonClothing_api.Models
         string username {get; set;}
         string password {get; set;}
         decimal storeCredit {get; set;}
-        public int[] cart{get; set;} 
+        public int[] cart{get; set;} //itemids
     }
 }
