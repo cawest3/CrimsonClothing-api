@@ -1,3 +1,4 @@
+
 namespace CrimsonClothing_api
 {
     public class ConnectionString
