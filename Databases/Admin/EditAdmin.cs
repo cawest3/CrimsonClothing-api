@@ -1,7 +1,7 @@
 namespace CrimsonClothing_api
 {
-    public interface IEditData
+    public class EditAdmin
     {
-         
+        
     }
 }

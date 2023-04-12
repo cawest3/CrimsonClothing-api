@@ -1,7 +1,7 @@
 namespace CrimsonClothing_api
 {
-    public interface ISaveData
+    public class EditItem
     {
-         
+        
     }
 }

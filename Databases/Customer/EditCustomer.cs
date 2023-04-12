@@ -1,6 +1,6 @@
 namespace CrimsonClothing_api
 {
-    public class EditData
+    public class EditCustomer
     {
         
     }
