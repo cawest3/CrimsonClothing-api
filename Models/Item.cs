@@ -12,5 +12,6 @@ namespace CrimsonClothing_api.Models
         public decimal value {get; set;}
         public decimal profit {get; set;}
         public bool inCart {get; set;}
+        public int consignmentId{get; set;}
     }
 }

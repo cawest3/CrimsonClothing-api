@@ -11,5 +11,6 @@ namespace CrimsonClothing_api.Models
         public decimal cost {get; set;}
         
         public decimal profit {get;set;}
+        public string consignmentImageSrc {get; set;}
     }
 }

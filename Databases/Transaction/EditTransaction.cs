@@ -12,7 +12,7 @@ namespace CrimsonClothing_api
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"UPDATE Transactions SET transactionId=@transactionId, profit=@profit, customerId=@customerId, WHERE transactionId=@Id";
+            string stm = @"UPDATE TRANSACTIONS SET transactionId=@transactionId, profit=@profit, customerId=@customerId, WHERE transactionId=@Id";
 
             using var cmd = new MySqlCommand(stm, con);
 
