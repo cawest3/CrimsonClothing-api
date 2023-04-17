@@ -1,0 +1,17 @@
+//SQL statements
+            ConnectionString myConnection = new ConnectionString();
+            string cs = myConnection.cs;
+            using var con = new MySqlConnection(cs);
+            con.Open();
+
+            string stm = @"INSERT INTO songs(songId, title, artist, createDate, favorite, deleteStatus) VALUES(@songId, @title, @artist, @createDate, @favorite, @deleteStatus)";
+            using var cmd = new MySqlCommand(stm, con);
+
+            cmd.Parameters.AddWithValue("@songId", mySong.songId);
+            cmd.Parameters.AddWithValue("@title", mySong.title);
+            cmd.Parameters.AddWithValue("@artist", mySong.artist);
+            cmd.Parameters.AddWithValue("@createDate", mySong.createDate);
+            cmd.Parameters.AddWithValue("@favorite", mySong.favorite);
+            cmd.Parameters.AddWithValue("@deleteStatus", mySong.deleteStatus);
+
+            cmd.ExecuteNonQuery();

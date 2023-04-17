@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrimsonClothing_api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]")] 
     [ApiController]
     public class AdminController : ControllerBase
     {

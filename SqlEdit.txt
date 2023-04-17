@@ -1,0 +1,21 @@
+//SQL statements
+            ConnectionString myConnection = new ConnectionString();
+            string cs = myConnection.cs;
+            using var con = new MySqlConnection(cs);
+            con.Open();
+
+            string stm = @"UPDATE songs SET songId=@songId, title=@title, artist=@artist, createDate=@createDate, favorite=@favorite, deleteStatus=@deleteStatus WHERE songId=@Id";
+
+            //@"UPDATE songs(songId, title, artist, createDate, favorite, deleteStatus) VALUES(@songId, @title, @artist, @createDate, @favorite, @deleteStatus WHERE songId=@Id)";
+
+            using var cmd = new MySqlCommand(stm, con);
+
+            cmd.Parameters.AddWithValue("@songId", editSong.songId);
+            cmd.Parameters.AddWithValue("@title", editSong.title);
+            cmd.Parameters.AddWithValue("@artist", editSong.artist);
+            cmd.Parameters.AddWithValue("@createDate", editSong.createDate);
+            cmd.Parameters.AddWithValue("@favorite", editSong.favorite);
+            cmd.Parameters.AddWithValue("@deleteStatus", editSong.deleteStatus);
+            cmd.Parameters.AddWithValue("@Id", Id);
+
+            cmd.ExecuteNonQuery();

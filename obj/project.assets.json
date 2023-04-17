@@ -9597,19 +9597,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jared\\.nuget\\packages\\": {}
+    "/Users/amandamalosh/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jared\\Documents\\source\\321repos\\CrimsonClothing\\CrimsonClothing-api\\CrimsonClothing-api.csproj",
+      "projectUniqueName": "/Users/amandamalosh/Desktop/Codes/321/Repo/proj/CrimsonClothing-api/CrimsonClothing-api.csproj",
       "projectName": "CrimsonClothing-api",
-      "projectPath": "C:\\Users\\jared\\Documents\\source\\321repos\\CrimsonClothing\\CrimsonClothing-api\\CrimsonClothing-api.csproj",
-      "packagesPath": "C:\\Users\\jared\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jared\\Documents\\source\\321repos\\CrimsonClothing\\CrimsonClothing-api\\obj\\",
+      "projectPath": "/Users/amandamalosh/Desktop/Codes/321/Repo/proj/CrimsonClothing-api/CrimsonClothing-api.csproj",
+      "packagesPath": "/Users/amandamalosh/.nuget/packages/",
+      "outputPath": "/Users/amandamalosh/Desktop/Codes/321/Repo/proj/CrimsonClothing-api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jared\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/amandamalosh/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -9669,7 +9669,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
       }
     }
   }

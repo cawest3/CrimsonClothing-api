@@ -76,5 +76,10 @@ app.UseCors("OpenPolicy");
 
 app.MapControllers();
 
+app.UseEndpoints(endpoints => 
+{
+    endpoints.MapControllers();
+});
+
 app.Run();
 
