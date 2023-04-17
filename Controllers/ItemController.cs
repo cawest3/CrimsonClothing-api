@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using CrimsonClothing_api.Models;
 
 namespace CrimsonClothing_api.Controllers
 {

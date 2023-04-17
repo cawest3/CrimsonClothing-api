@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using CrimsonClothing_api.Models;
 
 namespace CrimsonClothing_api.Controllers
 {
@@ -27,14 +28,18 @@ namespace CrimsonClothing_api.Controllers
 
         // POST: api/Consignment
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Consignment newConsignment)
         {
+            ISaveConsignment add = new SaveConsignment();
+            add.AddConsignment(newConsignment);
         }
 
         // PUT: api/Consignment/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] Consignment editConsignment, int Id)
         {
+            IEditConsignment edit = new EditConsignment();
+            edit.EditConsignment(editConsignment, Id);
         }
 
         // DELETE: api/Consignment/5

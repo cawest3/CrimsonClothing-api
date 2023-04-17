@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using CrimsonClothing_api.Models;
+using CrimsonClothing_api.Databases.Admin;
 
 namespace CrimsonClothing_api.Controllers
 {
@@ -27,14 +29,18 @@ namespace CrimsonClothing_api.Controllers
 
         // POST: api/Admin
         [HttpPost]
-        public void Post([FromBody] string value)
-        {
+        public void Post([FromBody] Admin newAdmin)
+        {   
+            ISaveAdmin add = new SaveAdmin();
+            add.AddAdmin(newAdmin);
         }
 
         // PUT: api/Admin/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] Admin editAdmin, int Id)
         {
+            IEditAdmin edit = new EditAdmin();
+            edit.EditAdmin(editAdmin, Id);
         }
 
         // DELETE: api/Admin/5
