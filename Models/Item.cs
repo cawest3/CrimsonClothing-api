@@ -4,13 +4,13 @@ namespace CrimsonClothing_api.Models
 {
     public class Item
     {
-        int itemId {get; set;}
-        int itemImageSrc{get;set;}
-        int price {get; set;}
-        string size {get; set;}
-        bool stock {get; set;}
-        decimal value {get; set;}
-        decimal profit {get; set;}
-        bool inCart {get; set;}
+        public int itemId {get; set;}
+        public int itemImageSrc{get;set;}
+        public int price {get; set;}
+        public string size {get; set;}
+        public bool stock {get; set;}
+        public decimal value {get; set;}
+        public decimal profit {get; set;}
+        public bool inCart {get; set;}
     }
 }

@@ -2,9 +2,9 @@ namespace CrimsonClothing_api.Models
 {
     public class Transaction
     {
-        int transactionId {get; set;}
-        int profit {get; set;}
-        int customerId {get; set;}
+        public int transactionId {get; set;}
+        public int profit {get; set;}
+        public int customerId {get; set;}
 
     }
 }

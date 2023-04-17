@@ -2,8 +2,8 @@ namespace CrimsonClothing_api.Models
 {
     public class Admin
     {
-        int adminId {get; set;}
-        string username {get; set;}
-        string password {get; set;}
+        public int adminId {get; set;}
+        public string username {get; set;}
+        public string password {get; set;}
     }
 }
