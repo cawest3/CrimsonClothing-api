@@ -20,8 +20,8 @@ namespace CrimsonClothing_api.Controllers
             return new string[] { "value1", "value2" };
         }
 
-        // GET: api/Admin/5
-        [HttpGet("{id}", Name = "Get")]
+        // GET: api/Admin/Get/5
+        [HttpGet("Get/{id}")/*("{id}", Name = "Get")*/]
         public string Get(int id)
         {
             return "value";

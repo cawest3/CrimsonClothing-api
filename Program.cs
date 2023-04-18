@@ -74,6 +74,8 @@ app.UseAuthorization();
 
 app.UseCors("OpenPolicy");
 
+app.UseRouting();
+
 app.MapControllers();
 
 app.UseEndpoints(endpoints => 
