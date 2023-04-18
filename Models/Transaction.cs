@@ -5,6 +5,7 @@ namespace CrimsonClothing_api.Models
         public int transactionId {get; set;}
         public int profit {get; set;}
         public int customerId {get; set;}
+        public int itemId{get; set;}
 
     }
 }
