@@ -31,6 +31,7 @@ namespace CrimsonClothing_api.Controllers
         [HttpPost]
         public void Post([FromBody] Admin newAdmin)
         {   
+            System.Console.WriteLine("In Admin Post");
             ISaveAdmin add = new SaveAdmin();
             add.AddAdmin(newAdmin);
         }
@@ -39,6 +40,7 @@ namespace CrimsonClothing_api.Controllers
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Admin editAdmin, int Id)
         {
+            System.Console.WriteLine("In Admin Put");
             IEditAdmin edit = new EditAdmin();
             edit.EditAdmin(editAdmin, Id);
         }

@@ -30,6 +30,7 @@ namespace CrimsonClothing_api.Controllers
         [HttpPost]
         public void Post([FromBody] Transaction newTransaction)
         {
+            System.Console.WriteLine("In Transaction Post");
             ISaveTransaction save = new SaveTransaction();
             save.AddTransaction(newTransaction);
         }
@@ -38,6 +39,7 @@ namespace CrimsonClothing_api.Controllers
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Transaction editTransaction, int Id)
         {
+            System.Console.WriteLine("In Transaction Put");
             IEditTransaction edit = new EditTransaction();
             edit.EditTransaction(editTransaction, Id);
         }

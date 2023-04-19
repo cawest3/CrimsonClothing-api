@@ -30,6 +30,7 @@ namespace CrimsonClothing_api.Controllers
         [HttpPost]
         public void Post([FromBody] Customer newCustomer)
         {
+            System.Console.WriteLine("In Customer Post");
             ISaveCustomer save = new SaveCustomer();
             save.AddCustomer(newCustomer);
         }
@@ -38,6 +39,7 @@ namespace CrimsonClothing_api.Controllers
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Customer editCustomer, int Id)
         {
+            System.Console.WriteLine("In Customer Put");
             IEditCustomer edit = new EditCustomer();
             edit.EditCustomer(editCustomer, Id);
         }
