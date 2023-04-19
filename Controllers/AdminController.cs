@@ -15,11 +15,13 @@ namespace CrimsonClothing_api.Controllers
     {
         // GET: api/Admin
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Admin> Get()
         {
-            List<Admin> admins = new List<Admin>();
-            ReadAdmin readin = new ReadAdmin();
-            admins = readin.GetAdmins();
+            // List<Admin> admins = new List<Admin>();
+            // IReadAdmin readin = new ReadAdmin();
+            // admins = readin.GetAdmins();
+
+            // return admins;
         }
 
         // GET: api/Admin/Get/5
