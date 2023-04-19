@@ -12,10 +12,10 @@ public class SaveAdmin : ISaveAdmin
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"INSERT INTO admins(adminId, adminUsername, adminPassword) VALUES(@adminId, @adminUsername, @adminPassword)";
+            string stm = @"INSERT INTO admins(adminUsername, adminPassword) VALUES(@adminUsername, @adminPassword)";
             using var cmd = new MySqlCommand(stm, con);
 
-            cmd.Parameters.AddWithValue("@adminId", newAdmin.adminId);
+            // cmd.Parameters.AddWithValue("@adminId", newAdmin.adminId);
             cmd.Parameters.AddWithValue("@adminUsername", newAdmin.adminUsername);
             cmd.Parameters.AddWithValue("@adminPassword", newAdmin.adminPassword);
 
