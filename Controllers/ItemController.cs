@@ -28,14 +28,19 @@ namespace CrimsonClothing_api.Controllers
 
         // POST: api/Item
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Item addItem)
         {
+            ISaveItem newItem = new SaveItem();
+            newItem.AddItem(addItem);
+
         }
 
         // PUT: api/Item/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] Item editItem, int Id)
         {
+            IEditItem edit = new EditItem();
+            edit.EditItem(editItem, Id);
         }
 
         // DELETE: api/Item/5

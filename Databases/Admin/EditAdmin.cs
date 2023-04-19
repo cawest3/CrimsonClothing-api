@@ -12,12 +12,12 @@ namespace CrimsonClothing_api.Databases.Admin
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"UPDATE ADMINS SET adminId=@adminId, username=@username, adminPassword=@adminPassword WHERE adminId=@Id";
+            string stm = @"UPDATE admins SET adminId=@adminId, adminUsername=@adminUsername, adminPassword=@adminPassword WHERE adminId=@Id";
 
             using var cmd = new MySqlCommand(stm, con);
 
             cmd.Parameters.AddWithValue("@adminId", editAdmin.adminId);
-            cmd.Parameters.AddWithValue("@username", editAdmin.username);
+            cmd.Parameters.AddWithValue("@adminUsername", editAdmin.adminUsername);
             cmd.Parameters.AddWithValue("@adminPassword", editAdmin.adminPassword);
             cmd.Parameters.AddWithValue("@Id", Id);
 
