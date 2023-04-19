@@ -1,0 +1,85 @@
+// //interface
+// using api.Models;
+
+// namespace api.Interfaces
+// {
+//     public interface IReadData
+//     {
+//         public List<Song> GetSongs();
+
+//         public Song GetSong(int Id);
+//     }
+// }
+
+
+// //class
+
+// using api.Interfaces;
+// using api.Models;
+// using MySql.Data.MySqlClient;
+
+
+// namespace api.Database
+// {
+//     public class ReadData : IReadData //this error is confusing, sometimes I implement, sometimes I don't
+//     {
+//         public List<Song> GetSongs(){
+
+//             ConnectionString myConnection = new ConnectionString();
+//             string cs = myConnection.cs;
+//             using var con = new MySqlConnection(cs);
+//             con.Open();
+
+//             string stm = @"SELECT * FROM songs"; //help
+//             using var cmd = new MySqlCommand(stm, con);
+
+//             List<Song> songs = new List<Song>();
+
+//             MySqlDataReader read = cmd.ExecuteReader();
+
+//             while(read.Read()){
+//                 Song song = new Song()
+//                 {
+//                     songId = read.GetInt32(0),
+//                     title = read.GetString(1),
+//                     artist = read.GetString(2),
+//                     createDate = read.GetDateTime(3),
+//                     favorite = read.GetBoolean(4),
+//                     deleteStatus = read.GetBoolean(5)
+//                 };
+//                 songs.Add(song);
+//             }
+
+//             return songs; 
+        
+//         }
+
+//         public Song GetSong(int Id){
+
+//             ConnectionString myConnection = new ConnectionString();
+//             string cs = myConnection.cs;
+//             using var con = new MySqlConnection(cs);
+//             con.Open();
+
+//             string stm = @"SELECT * FROM songs WHERE songId=@Id";
+//             using var cmd = new MySqlCommand(stm,con);
+
+//             cmd.Parameters.AddWithValue("@Id", Id); //should Id be songId in first parm
+//             cmd.Prepare();
+//             MySqlDataReader read = cmd.ExecuteReader();
+
+//             read.Read();
+
+//             Song mySong = new Song(){
+//                 songId = read.GetInt32(0),
+//                 title = read.GetString(1),
+//                 artist = read.GetString(2),
+//                 createDate = read.GetDateTime(3),
+//                 favorite = read.GetBoolean(4),
+//                 deleteStatus = read.GetBoolean(5)
+//             };
+
+//             return mySong;
+//         }
+//     }
+// }
