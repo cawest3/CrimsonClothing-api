@@ -17,7 +17,9 @@ namespace CrimsonClothing_api.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            List<Admin> admins = new List<Admin>();
+            ReadAdmin readin = new ReadAdmin();
+            admins = readin.GetAdmins();
         }
 
         // GET: api/Admin/Get/5
