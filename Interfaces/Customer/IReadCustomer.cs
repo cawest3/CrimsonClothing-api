@@ -5,10 +5,11 @@ namespace CrimsonClothing_api
     public interface IReadCustomer
     {
         public interface IReadCustomer{
-            public List<Customer> GetCustomers();
 
-            public Customer GetCustomer(int Id);
+            public List<Customer> GetCustomers();
+            // public Customer GetCustomer(int Id);
     
         }
+        public List<Customer> GetCustomers();
     }
 }
