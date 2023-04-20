@@ -7,7 +7,7 @@ namespace CrimsonClothing_api
         public interface IReadTransaction{
             public List<Transaction> GetTransactions();
 
-            public Transaction GetTransaction(int Id);
+            // public Transaction GetTransaction(int Id);
     
         }
     }

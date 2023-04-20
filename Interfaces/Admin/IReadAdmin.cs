@@ -8,8 +8,6 @@ namespace CrimsonClothing_api
 
         public interface IReadData{
             public List<Admin> GetAdmins();
-
-            public Admin GetAdmin(int Id);
     
         }
     }

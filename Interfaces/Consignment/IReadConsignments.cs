@@ -6,8 +6,6 @@ namespace CrimsonClothing_api
     {
         public interface IReadConsignments{
             public List<Consignment> GetConsignments();
-
-            public Consignment GetConsignment(int Id);
     
         }
     }
