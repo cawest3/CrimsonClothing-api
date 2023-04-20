@@ -18,10 +18,9 @@ namespace CrimsonClothing_api.Controllers
         public List<Admin> Get()
         {
             List<Admin> admins = new List<Admin>();
-            // IReadAdmin readin = new ReadAdmin();
-            // admins = readin.GetAdmins();
+            IReadAdmin readin = new ReadAdmin();
+            admins = readin.GetAdmins();
 
-            // return admins;
             return admins;
         }
 
