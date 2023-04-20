@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/amandamalosh/Desktop/Codes/321/Repo/proj/CrimsonClothing-api/CrimsonClothing-api.csproj": {}
+    "C:\\Users\\jared\\Documents\\source\\321repos\\CrimsonClothingApiCont\\CrimsonClothing-api\\CrimsonClothing-api.csproj": {}
   },
   "projects": {
-    "/Users/amandamalosh/Desktop/Codes/321/Repo/proj/CrimsonClothing-api/CrimsonClothing-api.csproj": {
+    "C:\\Users\\jared\\Documents\\source\\321repos\\CrimsonClothingApiCont\\CrimsonClothing-api\\CrimsonClothing-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/amandamalosh/Desktop/Codes/321/Repo/proj/CrimsonClothing-api/CrimsonClothing-api.csproj",
+        "projectUniqueName": "C:\\Users\\jared\\Documents\\source\\321repos\\CrimsonClothingApiCont\\CrimsonClothing-api\\CrimsonClothing-api.csproj",
         "projectName": "CrimsonClothing-api",
-        "projectPath": "/Users/amandamalosh/Desktop/Codes/321/Repo/proj/CrimsonClothing-api/CrimsonClothing-api.csproj",
-        "packagesPath": "/Users/amandamalosh/.nuget/packages/",
-        "outputPath": "/Users/amandamalosh/Desktop/Codes/321/Repo/proj/CrimsonClothing-api/obj/",
+        "projectPath": "C:\\Users\\jared\\Documents\\source\\321repos\\CrimsonClothingApiCont\\CrimsonClothing-api\\CrimsonClothing-api.csproj",
+        "packagesPath": "C:\\Users\\jared\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jared\\Documents\\source\\321repos\\CrimsonClothingApiCont\\CrimsonClothing-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/amandamalosh/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\jared\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -74,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -10,5 +10,6 @@ namespace CrimsonClothing_api
             // public Transaction GetTransaction(int Id);
     
         }
+        public List<Transaction> GetTransactions();
     }
 }

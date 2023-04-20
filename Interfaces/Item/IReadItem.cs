@@ -8,5 +8,6 @@ namespace CrimsonClothing_api
             public List<Item> GetItems();
     
         }
+        public List<Item> GetItems();
     }
 }

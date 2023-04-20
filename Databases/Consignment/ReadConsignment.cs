@@ -3,37 +3,35 @@ using CrimsonClothing_api.Models;
 
 namespace CrimsonClothing_api
 {
-    public class ReadConsignment : IReadConsignments
+    public class ReadConsignment : IReadConsignment
     {
-    //     public List<Song> GetSongs(){
+        public List<Consignment> GetConsignments(){
+            ConnectionString myConnection = new ConnectionString();
+            string cs = myConnection.cs;
+            using var con = new MySqlConnection(cs);
+            con.Open();
 
-    //         ConnectionString myConnection = new ConnectionString();
-    //         string cs = myConnection.cs;
-    //         using var con = new MySqlConnection(cs);
-    //         con.Open();
+            string stm = @"SELECT * FROM consignments"; //help
+            using var cmd = new MySqlCommand(stm, con);
 
-    //         string stm = @"SELECT * FROM songs"; //help
-    //         using var cmd = new MySqlCommand(stm, con);
+            List<Consignment> Consignments = new List<Consignment>();
 
-    //         List<Song> songs = new List<Song>();
+            MySqlDataReader read = cmd.ExecuteReader();
 
-    //         MySqlDataReader read = cmd.ExecuteReader();
+            while(read.Read()){
+                Consignment thisConsignment = new Consignment()
+                {
+                    consignmentId = read.GetInt32(0),
+                    customerId = read.GetInt32(1),
+                    price = read.GetDecimal(2),
+                    cost = read.GetDecimal(3),
+                    profit = read.GetDecimal(4),
+                    consignmentImageSrc = read.GetString(5)
+                };
+                Consignments.Add(thisConsignment);
+            }
 
-    //         while(read.Read()){
-    //             Song song = new Song()
-    //             {
-    //                 songId = read.GetInt32(0),
-    //                 title = read.GetString(1),
-    //                 artist = read.GetString(2),
-    //                 createDate = read.GetDateTime(3),
-    //                 favorite = read.GetBoolean(4),
-    //                 deleteStatus = read.GetBoolean(5)
-    //             };
-    //             songs.Add(song);
-    //         }
-
-    //         return songs; 
-        
-    //     }
+            return Consignments;
+        }
     }
 }

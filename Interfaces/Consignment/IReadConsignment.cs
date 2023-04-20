@@ -2,11 +2,12 @@ using CrimsonClothing_api.Models;
 
 namespace CrimsonClothing_api
 {
-    public interface IReadConsignments
+    public interface IReadConsignment
     {
-        public interface IReadConsignments{
+        public interface IReadConsignment{
             public List<Consignment> GetConsignments();
     
         }
+        public List<Consignment> GetConsignments();
     }
 }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using CrimsonClothing_api.Models;
+using CrimsonClothing_api.Databases;
 
 namespace CrimsonClothing_api.Controllers
 {
@@ -14,9 +15,13 @@ namespace CrimsonClothing_api.Controllers
     {
         // GET: api/Consignment
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Consignment> Get()
         {
-            return new string[] { "value1", "value2" };
+            List<Consignment> consignments = new List<Consignment>();
+            IReadConsignment readin = new ReadConsignment();
+            consignments = readin.GetConsignments();
+
+            return consignments;
         }
 
         // GET: api/Consignment/Get/5

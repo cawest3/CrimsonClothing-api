@@ -1,36 +1,37 @@
-namespace CrimsonClothing_api.Databases.Transaction
+using MySql.Data.MySqlClient;
+using CrimsonClothing_api.Models;
+
+namespace CrimsonClothing_api.Databases
 {
     public class ReadTransaction : IReadTransaction
     {
-        //     public List<Song> GetSongs(){
+            public List<Transaction> GetTransactions(){
 
-    //         ConnectionString myConnection = new ConnectionString();
-    //         string cs = myConnection.cs;
-    //         using var con = new MySqlConnection(cs);
-    //         con.Open();
+            ConnectionString myConnection = new ConnectionString();
+            string cs = myConnection.cs;
+            using var con = new MySqlConnection(cs);
+            con.Open();
 
-    //         string stm = @"SELECT * FROM songs"; //help
-    //         using var cmd = new MySqlCommand(stm, con);
+            string stm = @"SELECT * FROM transactions"; //help
+            using var cmd = new MySqlCommand(stm, con);
 
-    //         List<Song> songs = new List<Song>();
+            List<Transaction> Transactions = new List<Transaction>();
 
-    //         MySqlDataReader read = cmd.ExecuteReader();
+            MySqlDataReader read = cmd.ExecuteReader();
 
-    //         while(read.Read()){
-    //             Song song = new Song()
-    //             {
-    //                 songId = read.GetInt32(0),
-    //                 title = read.GetString(1),
-    //                 artist = read.GetString(2),
-    //                 createDate = read.GetDateTime(3),
-    //                 favorite = read.GetBoolean(4),
-    //                 deleteStatus = read.GetBoolean(5)
-    //             };
-    //             songs.Add(song);
-    //         }
+            while(read.Read()){
+                Transaction thisTransaction = new Transaction()
+                {
+                    transactionId = read.GetInt32(0),
+                    profit = read.GetDecimal(1),
+                    customerId = read.GetInt32(2),
+                    itemId = read.GetInt32(3)
+                };
+                Transactions.Add(thisTransaction);
+            }
 
-    //         return songs; 
+            return Transactions; 
         
-    //     }
+        }
     }
 }

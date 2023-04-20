@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using CrimsonClothing_api.Models;
+using CrimsonClothing_api.Databases;
 
 namespace CrimsonClothing_api.Controllers
 {
@@ -14,9 +15,13 @@ namespace CrimsonClothing_api.Controllers
     {
         // GET: api/Transaction
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Transaction> Get()
         {
-            return new string[] { "value1", "value2" };
+            List<Transaction> transactions = new List<Transaction>();
+            IReadTransaction readin = new ReadTransaction();
+            transactions = readin.GetTransactions();
+
+            return transactions;
         }
 
         // GET: api/Transaction/Get/5
