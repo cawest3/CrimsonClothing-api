@@ -19,7 +19,7 @@ namespace CrimsonClothing_api
             cmd.Parameters.AddWithValue("@custusername", newCustomer.custusername);
             cmd.Parameters.AddWithValue("@custPassword", newCustomer.custPassword);
             cmd.Parameters.AddWithValue("@storeCredit", newCustomer.storeCredit);
-            // cmd.Parameters.AddWithValue("@cart", newCustomer.cart);
+            cmd.Parameters.AddWithValue("@cart", newCustomer.cart);
 
             cmd.ExecuteNonQuery();
         }
