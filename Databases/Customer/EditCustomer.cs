@@ -12,7 +12,7 @@ namespace CrimsonClothing_api
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"UPDATE customers SET customerId=@customerId, custusername=@custusername, custPassword=@custPassword, storeCredit=@storeCredit, cart=@cart WHERE customerId=@Id";
+            string stm = @"UPDATE customers SET customerId=@customerId, custusername=@custusername, custPassword=@custPassword, storeCredit=@storeCredit, cart=@cart, custFName=@custFName, custLName=@custLName WHERE customerId=@Id";
 
             using var cmd = new MySqlCommand(stm, con);
 
@@ -21,6 +21,8 @@ namespace CrimsonClothing_api
             cmd.Parameters.AddWithValue("@custPassword", editCustomer.custPassword);
             cmd.Parameters.AddWithValue("@storeCredit", editCustomer.storeCredit);
             cmd.Parameters.AddWithValue("@cart", editCustomer.cart);
+            cmd.Parameters.AddWithValue("@custFName", editCustomer.custFName);
+            cmd.Parameters.AddWithValue("@custLName", editCustomer.custLName);
             cmd.Parameters.AddWithValue("@Id", Id);
 
             cmd.ExecuteNonQuery();

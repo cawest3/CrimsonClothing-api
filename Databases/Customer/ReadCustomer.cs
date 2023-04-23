@@ -26,7 +26,9 @@ namespace CrimsonClothing_api
                     custusername = read.GetString(1),
                     custPassword = read.GetString(2),
                     storeCredit = read.GetDecimal(3),
-                    cart = read.GetString(4)
+                    cart = read.GetString(4),
+                    custFName = read.GetString(5),
+                    custLName = read.GetString(6)
                 };
                 Customers.Add(thisCustomer);
             }
