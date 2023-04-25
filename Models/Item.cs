@@ -14,5 +14,6 @@ namespace CrimsonClothing_api.Models
         public bool inCart {get; set;}
         public int consignmentId{get; set;}
         public string itemName {get; set;}
+        public bool approved {get; set;}
     }
 }

@@ -32,7 +32,8 @@ namespace CrimsonClothing_api
                     profit = read.GetDecimal(6),
                     inCart = read.GetBoolean(7),
                     consignmentId = read.GetInt32(8),
-                    itemName = read.GetString(9)
+                    itemName = read.GetString(9),
+                    approved = read.GetBoolean(10)
                 };
                 Items.Add(thisItem);
             }

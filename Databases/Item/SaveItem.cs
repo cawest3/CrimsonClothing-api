@@ -12,7 +12,7 @@ namespace CrimsonClothing_api
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"INSERT INTO items(itemImageSrc, price, size, stock, cost, profit, consignmentId, itemName) VALUES(@itemImageSrc, @price, @size, @stock, @cost, @profit, @consignmentId, @itemName)";
+            string stm = @"INSERT INTO items(itemImageSrc, price, size, stock, cost, profit, consignmentId, itemName, approved) VALUES(@itemImageSrc, @price, @size, @stock, @cost, @profit, @consignmentId, @itemName, @approved)";
 
             using var cmd = new MySqlCommand(stm, con);
 
@@ -25,6 +25,7 @@ namespace CrimsonClothing_api
             cmd.Parameters.AddWithValue("@profit", newItem.profit);
             cmd.Parameters.AddWithValue("@consignmentId", newItem.consignmentId);
             cmd.Parameters.AddWithValue("@itemName", newItem.itemName);
+            cmd.Parameters.AddWithValue("@approved", newItem.approved);
 
             cmd.ExecuteNonQuery();
         }
